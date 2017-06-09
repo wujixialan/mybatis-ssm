@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--
+            2、settings包含很多重要的设置项
+                setting:用来设置每一个设置项
+                name：设置项名
+                value：设置项取值
+            mapUnderscoreToCamelCase: 启用驼峰命名规范
+        -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--
+            <setting name="cacheEnabled" value="true"/> 用来开启二级缓存
+        -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="MYSQL" value="mysql"></property>
+        <property name="ORACLE" value="oracle"></property>
+        <property name="SQL SERVER" value="sqlserver"></property>
+    </databaseIdProvider>
+</configuration>
